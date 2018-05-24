@@ -24,6 +24,10 @@ body {
     display: table;
 }
 
+footer {
+    display:table-footer-group; font-family: 'Menlo', monospace; font-size: 65%; color:dimgrey; text-align: center;
+}
+
 p {
 	font-family: 'Menlo', monospace; font-weight:400; font-style:normal;
 	margin: 0 0 1em;
@@ -81,7 +85,7 @@ span.divider {color: darkorange;}
 div.wrap {
     display: table-cell;
     vertical-align: middle;
-    padding: 1em;
+    padding: 6em 3em 3em 3em;
 }
 
 div.box1 {
@@ -90,7 +94,6 @@ div.box1 {
     bottom: 5vh;
     padding: 1.5em;
     max-width: 1100px;
-    border: 3px dashed darkorange; border-radius:22px;
 }
 
 div #title {
@@ -123,21 +126,70 @@ div.logo {
 */
 
 /* GALLERY */
+
+div.pics {
+    width:100%;
+    padding: 2em 0 0;
+    margin: 0;
+}
+
 div.browse {
     width: 100%;
+    padding: 2em 0 0;
 }
-div #instafeed {
-    border: 1px dotted grey;
-    width: 90%;
-}
+
 ul.insta {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 li.insta {
-    padding: 0 1em 1em 0;
+    padding: 0.9em 0.9em 0.9em 0.9em;
+    margin: 0;
     display:inline-block;
+}
+
+.f-gallery {
+    background: rgba(0,0,0,0.7);
+}
+.f-gallery .featherlight-content {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+.f-gallery .featherlight-next {
+    right: 10px;
+    left: 90%;
+}
+.f-gallery .featherlight-previous {
+    right: 90%;
+    left: 10px;
+}
+.f-gallery .featherlight-next:hover,
+.f-gallery .featherlight-previous:hover {
+    background: none;
+}
+.f-gallery .featherlight-next:hover span,
+.f-gallery .featherlight-previous:hover span {
+    font-size: 1.6em;
+    color: #fff;
+    margin-top: -0.7em;
+    text-shadow: 0 0 0.1em;
+}
+.f-gallery .featherlight-close-icon {
+    font-size: 2.5em;
+    background: none;
+    color: transparent;
+    margin: 0 0.3em 0 0;
+}
+.f-gallery .featherlight-close-icon:hover {
+    font-size: 2.5em;
+    color: #fff;
+    background: none;
+    text-shadow: 0 0 0.1em;
 }
 
 details[open] summary:after {
@@ -157,33 +209,37 @@ summary:after {
 
 /* MEDIA QUERY */
 @media only screen and (max-width: 640px) {
-    html {font-size:125%;}
+    html {font-size:100%;}
     p {margin: 0 0 0.3em;}
-    div.wrap {padding: 0.5em;}
+    div.wrap {padding: 0.0em;}
     div.box1 {padding: 0.5em; bottom: 0;}
-    div #title {padding: 0 2em 0;}
+    div #title {padding: 0 1em 0;}
     div.menu {padding-bottom: 1em;}
     h1 {letter-spacing: 0.1em;}
-    div.menu ul li {display: block;}
-    span.divider {display: none;}
+    div.pics {padding-top: 1em;}
+    div.browse {padding-top: 1em;}
     li.insta {display:block; padding: 0 0 1em 0;}
     .my-video-dimensions {width: 80%; height: 80%;}
     img {width: 80%; height: 80%;}
+    .f-gallery .featherlight-next:hover span,
+    .f-gallery .featherlight-previous:hover span {
+        font-size: 1.5em;
+        color: transparent;
+        text-shadow: 0px 0px 1px #fff;
+        margin-top: -2em;
+    }
 }
 
-@media only screen and (max-height: 650px) {
-    div.box1 {bottom: 0;}
-}
-
-@media only screen and (max-width: 1150px) {
-    div.box1 {width: 95%;}
-    .my-video-dimensions {width: 240px; height: 240px;}
-    img {width: 240px; height: 240px;}
+@media only screen and (max-width: 480px) {
+    div.menu ul li {letter-spacing: 0.15em;}
 }
 
 @media only screen and (max-width: 950px) and (min-width: 400px) {
     div.box1 {bottom: 0;}
-    li.insta {display:block; padding: 0 0 1em 0;}
+    li.insta {display:inline-block; padding: 0.9em 0.9em 0.9em 0.9em;}
     .my-video-dimensions {width: 320px; height: 320px;}
-    img {width: 320px; height: 320px;}
+    /*img {width: 320px; height: 320px;}*/
+}
+
+@media only screen and (max-width: 1024px) {
 }
