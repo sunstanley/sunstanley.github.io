@@ -65,5 +65,12 @@
 <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="/assets/gallery.js" type="text/javascript" charset="utf-8"></script>
 </body>
-<footer>Last updated 2020-02-27. &copy Stanley Sun 2020.</footer>
+<footer><div id="copyOut"></div>
+<script type="text/javascript">
+var date=new Date(),
+    year=date.getFullYear(),
+    text="&copy "+year+" Stanley Sun.";
+document.getElementById('copyOut').innerHTML=text;
+</script>
+</footer>
 </html>
