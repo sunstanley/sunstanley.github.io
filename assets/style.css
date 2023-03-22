@@ -61,7 +61,7 @@ a.img:hover, a.img:active, a.img:focus {
 }
 
 a,a:link,a:visited {
-        color: inherit; background-color: #FFFdf5; text-decoration:none;
+        color: inherit; background-color: #fffbeb; text-decoration:none;
         border:1px solid #000;
         border-radius: 1.0em;
         box-shadow:2px 2px Tan;
@@ -71,7 +71,7 @@ a,a:link,a:visited {
 	transition-timing-function: ease, ease;
 }
 a:hover {
-        color: inherit; background-color: #FCEFDE; text-decoration:none;
+        color: inherit; background-color: #FFF; text-decoration:none;
         border:1px solid #000;
         border-radius: 1.0em;
         box-shadow:5px 5px Tan;
