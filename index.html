@@ -11,59 +11,44 @@
     <meta name="author" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1">        
     <link rel="favourites icon" href="/assets/favicon.ico" />
+    <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
-    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
-    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
-
     <link rel="stylesheet" href="/assets/style.css" media="screen" type="text/css" />
 </head>
 
 <body>
-
-<div class="wrap">
-    <div class="box1">
-        <div id="title">
-            <h1><p>stanley sun</p></h1>
-        </div>
-        <div class="menu">
-            <ul>
-            <li><a href="https://instagram.com/stan1eysun/" target="_blank">insta</a></li><span class="divider"> <b>/</b></span>
-            <li><a href="mailto:stanley@stanleysun.ca" target="_blank">email</a></li><!--<span class="divider"> <b>/</b></span>
-            <li><a href="http://stanleysun.ca/blog/" target="_blank">35mm</a></li> -->
-            </ul>
-        </div>
-        
-        <div data-featherlight-gallery data-featherlight-filter="a" class="pics">
-            <ul>                
-                                
-                <li class="insta"><a class="gallery" href="/assets/img/bottle opener.jpg"><img src="/assets/img/bottle opener.jpg" width="320" height="320" alt="bottle opener" title="bottle opener"></a>
-                    
-                <li class="insta"><a class="gallery" href="/assets/img/marble slab.jpg"><img src="/assets/img/marble slab thumb.jpg" width="320" height="320" alt="marble slab salvage" title="marble slab salvage"></a>
-                     
-                <li class="insta"><a class="gallery" href="/assets/img/steel frame.jpg"><img src="/assets/img/steel frame.jpg" width="320" height="320" alt="steel frame" title="steel frame"></a>
-                    
-                <li class="insta"><a class="gallery" href="/assets/img/walnut spoon.jpg"><img src="/assets/img/walnut spoon.jpg" width="320" height="320" alt="walnut eating spoon" title="walnut eating spoon"></a>
-                                    
-                <li class="insta"><a class="gallery" href="/assets/img/drystone bridge.jpg"><img src="/assets/img/drystone bridge.jpg" width="320" height="320" alt="drystone bridge" title="drystone bridge"></a>
-                    
-                <li class="insta"><a class="gallery" href="/assets/img/balanced stones.jpg"><img src="/assets/img/balanced stones.jpg" width="320" height="320" alt="balanced stone" title="balanced stone"></a>
-                    
-                <li class="insta"><a class="gallery" href="/assets/img/chopping block.jpg"><img src="/assets/img/chopping block.jpg" width="320" height="320" alt="chopping block" title="chopping block"></a>
-
-                <li class="insta"><a class="gallery" href="/assets/img/side table.jpg"><img src="/assets/img/side table.jpg" width="320" height="320" alt="side table" title="side table"></a>
-                    
-                <li class="insta"><a class="gallery" href="/assets/img/prototype 0.1.jpg"><img src="/assets/img/prototype 0.1 thumb.jpg" width="320" height="320" alt="prototype" title="prototype"></a>
-            </ul>
-        </div>
-        <p></p>
+<div class="grid">
+    <div id="header">
+    <h1>Stanley Sun</h1></div>
+    <div class="nav">
+        <ul>
+            <li><a href="https://instagram.com/stan1eysun/" target="_blank">insta</a></li><span class="divider"><b> /</b></span>
+            <li><a href="mailto:stanley@stanleysun.ca" target="_blank">email</a></li>
+        </ul>
     </div>
+    <div class="tile"><img src="/assets/img/steel frame.jpg" alt="steel frame" title="steel frame">
+        <p>Table frame: welded square tube and solid round bar.</p></div>
+    <div class="tile"><img src="/assets/img/bottle opener.jpg" alt="bottle opener" title="bottle opener">
+        Bottle opener: solid round bar, hand-shaped and hot-blued. With a flat to not roll off the table.</div>
+    <div class="tile"><img src="/assets/img/marble slab thumb.jpg" alt="marble slab salvage" title="marble slab salvage">
+        Salvaged weathered marble, awaiting processing.</div>
+    <div class="tile"><img src="/assets/img/walnut spoon.jpg" alt="walnut eating spoon" title="walnut eating spoon">
+        Walnut eating spoon, hand carved, knife finish.</div>
+    <div class="tile"><img src="/assets/img/drystone bridge.jpg" width="320" height="320" alt="drystone bridge" title="drystone bridge">
+        Drystone bridge, completed with John Shaw-Rimmington, Mark Ricard, and workshop participants over 2 weeks.</div>
+    <div class="tile"><img src="/assets/img/balanced stones.jpg" width="320" height="320" alt="balanced stone" title="balanced stone">
+        Finding balance on the Athabasca River.</div>
+    <div class="tile"><img src="/assets/img/chopping block.jpg" width="320" height="320" alt="chopping block" title="chopping block">
+        Workbench, chopping block.</div>
+    <div class="tile"><img src="/assets/img/side table.jpg" width="320" height="320" alt="side table" title="side table">
+        Side table: sugar maple frame with wedged thru-tenons, buckeye burl top, inspired by George Nakashima.</div>
+    <div class="tile"><img src="/assets/img/prototype 0.1 thumb.jpg" width="320" height="320" alt="prototype" title="prototype">
+        Scale table prototype: spalted maple top.</div>
 </div>
+
 <script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.3/jquery.detect_swipe.min.js"></script>    
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/assets/gallery.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.3/jquery.detect_swipe.min.js"></script>
 </body>
 <footer><div id="copyOut"></div>
 <script type="text/javascript">
