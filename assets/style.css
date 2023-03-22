@@ -61,14 +61,32 @@ a.img:hover, a.img:active, a.img:focus {
 }
 
 a,a:link,a:visited {
-	color: inherit; background-color: cornsilk; text-decoration:none;
-	transition-property: color, background-color;
+        color: inherit; background-color: #FFFdf5; text-decoration:none;
+        border:1px solid #000;
+        border-radius: 1.0em;
+        box-shadow:2px 2px Tan;
+        padding:2px 8px;
+	transition-property: color, background-color, box-shadow;
 	transition-duration: 0.3s, 0.3s;
 	transition-timing-function: ease, ease;
 }
-a:hover,a:active,a:focus {
-	color: #FFF; background-color: #F48D08;
-	transition-property: color, background-color;
+a:hover {
+        color: inherit; background-color: #FCEFDE; text-decoration:none;
+        border:1px solid #000;
+        border-radius: 1.0em;
+        box-shadow:5px 5px Tan;
+        padding:2px 8px;
+	transition-property: color, background-color, box-shadow;
+	transition-duration: 0.3s, 0.3s;
+	transition-timing-function: ease, ease;
+}
+a:active,a:focus {
+        color: inherit; background-color: Bisque; text-decoration:none;
+        border:1px solid #000;
+        border-radius: 1.0em;
+        box-shadow: inset 2px 2px Tan;
+        padding:2px 8px;
+	transition-property: color, background-color, box-shadow;
 	transition-duration: 0.3s, 0.3s;
 	transition-timing-function: ease, ease;
 }
@@ -130,6 +148,28 @@ img {
     p {margin: 0 0 0.3em;}
     h1 {letter-spacing: 0.1em;}
 /*    img {width: 100%; height: 100%;}*/
+}
+@media only screen and (max-width:640px) {
+    a,a:link,a:visited {
+        color: inherit; background-color: #FFFdf5; text-decoration:none;
+        border:1px solid #000;
+        border-radius: 1.0em;
+        box-shadow:2px 2px Tan;
+        padding:2px 8px;
+	transition-property: color, background-color;
+	transition-duration: 0.3s, 0.3s;
+	transition-timing-function: ease, ease;
+    }
+    a:active {
+        color: inherit; background-color: Bisque; text-decoration:none;
+        border:1px solid #000;
+        border-radius: 1.0em;
+        box-shadow: inset 2px 2px Tan;
+        padding:2px 8px;
+	transition-property: color, background-color;
+	transition-duration: 0.3s, 0.3s;
+	transition-timing-function: ease, ease;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
