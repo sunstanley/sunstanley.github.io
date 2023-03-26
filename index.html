@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">        
     <link rel="favourites icon" href="/assets/favicon.ico" />
     <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/style.css" media="screen" type="text/css" />
@@ -29,26 +30,83 @@
     </div>
     <div class="tile"><img src="/assets/img/sankaku-vol01-300px-opt3.gif" alt="sankaku book" title="sankaku book">
         <p>Blender render: <a href="https://www.sankaku.is/volumes/volume-01" target="_blank">sankaku</a> volume 01 mockup.</p></div>
-    <div class="tile"><img src="/assets/img/steel frame.jpg" alt="steel frame" title="steel frame">
+    <div class="tile"><img src="/assets/img/steel-frame-01.jpg" alt="steel frame" title="steel frame">
         <p>Table frame: welded square tube and solid round bar.</p></div>
-    <div class="tile"><img src="/assets/img/bottle opener.jpg" alt="bottle opener" title="bottle opener">
+    
+    <div class="tile"><div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1/2"><img src="/assets/img/bottle-opener-01.jpg" alt="bottle opener" title="bottle opener"></div>
+            <div class="swiper-slide swiper-slide-next" role="group"><img src="/assets/img/bottle-opener-02.jpg" alt="bottle opener" title="bottle opener"></div>
+            <div class="swiper-slide" role="group"><img src="/assets/img/bottle-opener-03.jpg" alt="bottle opener" title="bottle opener"></div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" aria-current="true">1</span>
+            <span class="swiper-pagination-bullet" tabindex="0">2</span>
+            <span class="swiper-pagination-bullet" tabindex="0">3</span>
+        </div></div>
         Bottle opener: solid round bar, hand-shaped and hot-blued. With a flat to not roll off the table.</div>
-    <div class="tile"><img src="/assets/img/marble slab thumb.jpg" alt="marble slab salvage" title="marble slab salvage">
+    
+    <div class="tile"><img src="/assets/img/marble-slab-thumb.jpg" alt="marble slab salvage" title="marble slab salvage">
         Salvaged weathered marble, awaiting processing.</div>
-    <div class="tile"><img src="/assets/img/walnut spoon.jpg" alt="walnut eating spoon" title="walnut eating spoon">
+    <div class="tile"><img src="/assets/img/walnut-spoon-01.jpg" alt="walnut eating spoon" title="walnut eating spoon">
         Walnut eating spoon, hand carved, knife finish.</div>
-    <div class="tile"><img src="/assets/img/drystone bridge.jpg" width="320" height="320" alt="drystone bridge" title="drystone bridge">
+    <div class="tile"><img src="/assets/img/drystone-bridge-01.jpg" width="320" height="320" alt="drystone bridge" title="drystone bridge">
         Drystone bridge, completed with John Shaw-Rimmington, Mark Ricard, and workshop participants over 2 weeks.</div>
-    <div class="tile"><img src="/assets/img/balanced stones.jpg" width="320" height="320" alt="balanced stone" title="balanced stone">
+    <div class="tile"><img src="/assets/img/balanced-stones-01.jpg" width="320" height="320" alt="balanced stone" title="balanced stone">
         Finding balance on the Athabasca River.</div>
-    <div class="tile"><img src="/assets/img/chopping block.jpg" width="320" height="320" alt="chopping block" title="chopping block">
+    <div class="tile"><img src="/assets/img/chopping-block-01.jpg" width="320" height="320" alt="chopping block" title="chopping block">
         Workbench, chopping block.</div>
-    <div class="tile"><img src="/assets/img/side table.jpg" width="320" height="320" alt="side table" title="side table">
+    <div class="tile"><img src="/assets/img/side-table-01.jpg" width="320" height="320" alt="side table" title="side table">
         Side table: sugar maple frame with wedged thru-tenons, buckeye burl top, inspired by George Nakashima.</div>
-    <div class="tile"><img src="/assets/img/prototype 0.1 thumb.jpg" width="320" height="320" alt="prototype" title="prototype">
-        Scale table prototype: spalted maple top.</div>
+    <div class="tile"><img src="/assets/img/prototype-0.1-thumb.jpg" width="320" height="320" alt="prototype" title="prototype">
+        Scale furniture prototype: spalted maple table.</div>
 </div>
 
+    
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+    });
+</script>
+<!--
+<script>
+   document.querySelector('.swiper').forEach(function(index, element){
+       var $this = document.querySelector(this);
+       $this.classList.add('instance-' + index);
+       $this.find('.swiper-pagination').classList.add('pagina' + index);
+       var swiper = new Swiper('.instance-' + index, {
+        pagination: $this.find('.swiper-pagination')[0],
+        paginationClickable: true,
+        // Disable preloading of all images
+        preloadImages: false,
+        // Enable lazy loading
+        lazyLoading: true,
+        });
+    });
+</script>
+<!--
+<script>
+    const sliders = document.getElementsByClassName('swiper');
+    for (let slide of sliders) {
+        const nextEl = slide.getElementsByClassName('swiper-button-next')[0]
+        const prevEl = slide.getElementsByClassName('swiper-button-prev')[0]
+        let carousel = new Swiper(slide, {
+            navigation: {
+                nextEl,
+                prevEl,
+            },
+        });
+    }
+</script> -->
 <script src="//code.jquery.com/jquery-latest.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.3/jquery.detect_swipe.min.js"></script>
 </body>
