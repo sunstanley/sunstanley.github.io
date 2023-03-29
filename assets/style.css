@@ -34,7 +34,7 @@ p {
 	display:block;
     font-family: 'Menlo', monospace, sans-serif; font-weight:400; font-style:normal;
 	margin: 0 0 1em;
-    line-height:1.4em;
+    line-height:1.6em;
 }
 
 h1 {font-size: 2.1em; font-weight: bold; letter-spacing:0.1em;}
@@ -133,7 +133,7 @@ img {
     width: 100%;
 }
 .swiper {
-    padding-bottom: 2.5em;
+    padding-bottom: 2.2em;
 }
 .swiper, .swiper-wrapper {
     display: inherit;
@@ -151,22 +151,22 @@ swiper-container-horizontal> .swiper-pagination {
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     color: inherit; background-color: Bisque; text-decoration:none;
     border: 1px solid #000;
-    border-radius: 1.7em;
+    border-radius: 1.6em;
     box-shadow: inset 2px 2px Tan;
     padding: 0px 0px;
     font-size: 1.0em;
-    height: 1.7em;
-    width: 1.7em;
+    height: 1.6em;
+    width: 1.6em;
 }
 span.swiper-pagination-bullet {
     color: inherit; background-color: #fffbeb; text-decoration:none;
     border: 1px solid #000;
-    border-radius: 1.7em;
+    border-radius: 1.6em;
     box-shadow: 2px 2px Tan;
     padding: 0px 0px;
     font-size: 1.0em;
-    height: 1.7em;
-    width: 1.7em;
+    height: 1.6em;
+    width: 1.6em;
     opacity: 1;
 }
 

@@ -30,12 +30,21 @@
     </div>
     <div class="tile"><img src="/assets/img/sankaku-vol01-300px-opt3.gif" alt="sankaku book" title="sankaku book">
         <p>Blender render: <a href="https://www.sankaku.is/volumes/volume-01" target="_blank">sankaku</a> volume 01 mockup.</p></div>
-    <div class="tile"><img src="/assets/img/steel-frame-01.jpg" alt="steel frame" title="steel frame">
+    
+    <div class="tile"><div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden" data-id="swiper_01">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1/2"><img src="/assets/img/steel-frame-01.jpg" alt="steel frame" title="steel frame"></div>
+            <div class="swiper-slide swiper-slide-next" role="group"><img src="/assets/img/steel-frame-02.jpg" alt="steel-frame side table" title="steel-frame side table"></div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" aria-current="true">1</span>
+            <span class="swiper-pagination-bullet" tabindex="0">2</span>
+        </div></div>        
         <p>Table frame: welded square tube and solid round bar.</p></div>
     
     <div class="tile"><div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
         <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1/2"><img src="/assets/img/bottle-opener-01.jpg" alt="bottle opener" title="bottle opener"></div>
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1/3"><img src="/assets/img/bottle-opener-01.jpg" alt="bottle opener" title="bottle opener"></div>
             <div class="swiper-slide swiper-slide-next" role="group"><img src="/assets/img/bottle-opener-02.jpg" alt="bottle opener" title="bottle opener"></div>
             <div class="swiper-slide" role="group"><img src="/assets/img/bottle-opener-03.jpg" alt="bottle opener" title="bottle opener"></div>
         </div>
@@ -55,28 +64,45 @@
     <div class="tile"><img src="/assets/img/balanced-stones-01.jpg" width="320" height="320" alt="balanced stone" title="balanced stone">
         Finding balance on the Athabasca River.</div>
     <div class="tile"><img src="/assets/img/chopping-block-01.jpg" width="320" height="320" alt="chopping block" title="chopping block">
-        Workbench, chopping block.</div>
-    <div class="tile"><img src="/assets/img/side-table-01.jpg" width="320" height="320" alt="side table" title="side table">
-        Side table: sugar maple frame with wedged thru-tenons, buckeye burl top, inspired by George Nakashima.</div>
+        Workbench: knockdown tusk tenon construction. <p>Chopping block: pine cookie with tapered-tenon maple legs.</p></div>
+    <div class="tile"><div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1/3"><img src="/assets/img/dendrite-table-01.jpg" alt="dendrite table" title="dendrite table"></div>
+            <div class="swiper-slide swiper-slide-next" role="group"><img src="/assets/img/dendrite-table-02.jpg" alt="dendrite table" title="wedged tenons"></div>
+            <div class="swiper-slide" role="group"><img src="/assets/img/dendrite-table-03.jpg" alt="dendrite table" title="buckeye burl"></div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" aria-current="true">1</span>
+            <span class="swiper-pagination-bullet" tabindex="0">2</span>
+            <span class="swiper-pagination-bullet" tabindex="0">3</span>
+        </div></div>
+        Dendrite table: sugar maple frame with hand-cut wedged thru-tenons, buckeye burl top &mdash; inspired by George Nakashima's Conoid Cross Leg.</div>
     <div class="tile"><img src="/assets/img/prototype-0.1-thumb.jpg" width="320" height="320" alt="prototype" title="prototype">
         Scale furniture prototype: spalted maple table.</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        loop: true,
+const Slider = ()=>{
+let allSliders = document.querySelectorAll('.swiper')
+let allPag = document.querySelectorAll('.swiper-pagination')
+allSliders.forEach((slider, index)=>{
+    let sliderLength = slider.children[0].children.length
+    let result = (sliderLength > 1) ? true : false
+    const swiper = new Swiper(slider, {
+        /*loop: result,*/
         pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
+            el: allPag[index],
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
         },
-      },
     });
+})
+} 
+window.addEventListener('load', Slider)
 </script>
-<script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.3/jquery.detect_swipe.min.js"></script>
 </body>
 <footer><div id="copyOut"></div>
 <script type="text/javascript">
