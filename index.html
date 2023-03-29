@@ -91,6 +91,7 @@ allSliders.forEach((slider, index)=>{
     let result = (sliderLength > 1) ? true : false
     const swiper = new Swiper(slider, {
         /*loop: result,*/
+        cssMode: true,
         pagination: {
             el: allPag[index],
             clickable: true,
