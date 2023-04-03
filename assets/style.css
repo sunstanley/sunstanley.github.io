@@ -48,8 +48,8 @@ a,a:link,a:visited {
         color: inherit; background-color: #fffbeb; text-decoration:none;
         border:1px solid #000;
         border-radius: 1.0em;
-        box-shadow:2px 2px Tan;
-        padding:2px 8px;
+        box-shadow: 3px 3px Tan;
+        padding: 5px 8px;
 	transition-property: color, background-color, box-shadow;
 	transition-duration: 0.3s, 0.3s;
 	transition-timing-function: ease, ease;
@@ -58,8 +58,8 @@ a:hover, a:focus {
         color: inherit; background-color: #FFF; text-decoration:none;
         border:1px solid #000;
         border-radius: 1.0em;
-        box-shadow:5px 5px Tan;
-        padding:2px 8px;
+        box-shadow:5px 5px 3px Tan;
+        padding: 5px 8px;
 	transition-property: color, background-color, box-shadow;
 	transition-duration: 0.3s, 0.3s;
 	transition-timing-function: ease, ease;
@@ -69,7 +69,7 @@ a:active {
         border:1px solid #000;
         border-radius: 1.0em;
         box-shadow: inset 2px 2px Tan;
-        padding:2px 8px;
+        padding: 5px 8px;
 	transition-property: color, background-color, box-shadow;
 	transition-duration: 0.3s, 0.3s;
 	transition-timing-function: ease, ease;
@@ -90,12 +90,14 @@ hr {
     border: none;
     height: 2.0em;
 }
-
+.fa-arrow-up {
+    padding: 0 0 0 2px;
+}
 /* NEW GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%),1fr));
-    grid-template-rows: auto 30px;
+    grid-template-rows: auto 40px;
     grid-gap: 1.6em;
     grid-auto-flow: dense;
     margin: 1.0em;
@@ -106,9 +108,21 @@ hr {
 .grid .nav {
     grid-column: 1/-1;
 }
+.nav {
+    display: flex;
+    position: sticky;
+    top: 0.2em;
+    justify-content: right;
+    padding: 0.4em 0.8em;
+    background-color: none;
+    z-index: 100;
+}
 div.nav ul li {
     display: inline-block;
     letter-spacing: 0.1em;
+}
+#up {
+    opacity: 0;
 }
 .tile {
     display: flex;
@@ -126,6 +140,14 @@ div.nav ul li {
     align-self: flex-start;
     grid-column: 1;
     padding-bottom: 3em;
+}
+.tile.ar3_2 img{
+    aspect-ratio: 3/2;
+    object-position: center;
+}
+.tile.ar2_1 img{
+    aspect-ratio: 2/0.975;
+    object-position: center;
 }
 img {
     width: 100%;
@@ -171,7 +193,7 @@ span.swiper-pagination-bullet:hover, span.swiper-pagination-bullet:focus {
     color: inherit; background-color: #FFF; text-decoration:none;
     border: 1px solid #000;
     border-radius: 1.6em;
-    box-shadow: 5px 5px Tan;
+    box-shadow: 4px 4px 3px Tan;
     padding-left: 0.45em;
 	transition-property: color, background-color, box-shadow;
 	transition-duration: 0.3s, 0.3s;
@@ -193,8 +215,13 @@ span.swiper-pagination-bullet {
 }
 
 /* MEDIA QUERY */
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 870px) {
     .tile.wide{
         grid-column: span 2;
+    }
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
     }
 }
