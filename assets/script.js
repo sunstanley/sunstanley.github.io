@@ -22,7 +22,22 @@ allSliders.forEach((slider, index)=>{
 } 
 window.addEventListener('load', Slider)
 
-// Copyright with year
+// Back-to-Top button
+const viewportEl = document.querySelector("#initial-view");
+const buttonEl = document.querySelector(".up-button");
+
+const handler = (entries) => {
+    console.log(entries)
+    if (!entries[0].isIntersecting) {
+        buttonEl.classList.add('enabled')
+    } else {
+        buttonEl.classList.remove('enabled')
+    }
+}
+const observer = new window.IntersectionObserver(handler)
+observer.observe(viewportEl)
+
+// Copyright statement
 const date=new Date(),
     year=date.getFullYear(),
     text="&copy "+year+" Stanley Sun.";
