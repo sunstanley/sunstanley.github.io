@@ -8,7 +8,7 @@ www.stanleysun.ca
 
 html {box-sizing: border-box; height:100%;}
 
-* {margin: 0; padding: 0; border: 0; outline: 0; box-sizing: inherit;}
+*, *:before, *:after {margin: 0; padding: 0; border: 0; outline: 0; box-sizing: inherit;}
 
 img.preload {display: none;}
 
@@ -132,12 +132,15 @@ div.nav ul li {
 .up-button {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.8s, visibility 0.1s !important;
+    transition: opacity 0.8s, visibility 0.8s !important;
 }
 .up-button.enabled {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.8s;
+}
+.up-button.a {
+    transition: box-shadow 0.3s ease 0.1s;
 }
 .tile {
     display: flex;
@@ -190,7 +193,40 @@ img {
     text-align: left;
     padding-bottom: 0.25em;
 }
-span.swiper-pagination-bullet.swiper-pagination-bullet-active, span.swiper-pagination-bullet.swiper-pagination-bullet-active:hover, span.swiper-pagination-bullet.swiper-pagination-bullet-active:focus {
+
+span.swiper-pagination-bullet {
+    position: relative;
+    color: inherit; background-color: #fffbeb; text-decoration:none;
+    border: 1px solid #000;
+    border-radius: 1.6em;
+    box-shadow: 2px 2px 0.0px 0.1px Tan;
+    padding-left: 0.45em;
+    font-size: 1.0em;
+    height: 1.6em;
+    width: 1.6em;
+    opacity: 1;
+}
+span.swiper-pagination-bullet::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: inherit; background-color: #FFF; text-decoration:none;
+    border: 0px solid #000;
+    border-radius: 1.6em;
+    box-sizing: border-box;
+    margin: 0;
+    box-shadow: 4px 4px 4px 0.2px Tan;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: -5;
+    transition: opacity ease 0.3s;
+}
+span.swiper-pagination-bullet:hover::after, span.swiper-pagination-bullet:focus::after {
+    opacity: 1;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active, span.swiper-pagination-bullet.swiper-pagination-bullet-active:hover, span.swiper-pagination-bullet.swiper-pagination-bullet-active:focus, span.swiper-pagination-bullet:active {
     color: inherit; background-color: Bisque; text-decoration:none;
     border: 1px solid #000;
     border-radius: 1.6em;
@@ -199,33 +235,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active, span.swiper-pagin
     font-size: 1.0em;
     height: 1.6em;
     width: 1.6em;
-    transition-property: color, background-color, box-shadow;
-	transition-duration: 0.3s, 0.3s;
-	transition-timing-function: ease, ease;
+    transition: box-shadow 0.3s ease 0.1s, background-color 0.3s ease 0.1s;
 }
-span.swiper-pagination-bullet:hover, span.swiper-pagination-bullet:focus {
-    color: inherit; background-color: #FFF; text-decoration:none;
-    border: 1px solid #000;
-    border-radius: 1.6em;
-    box-shadow: 4px 4px 3px Tan;
-    padding-left: 0.45em;
-	transition-property: color, background-color, box-shadow;
-	transition-duration: 0.3s, 0.3s;
-	transition-timing-function: ease, ease;
-}
-span.swiper-pagination-bullet {
-    color: inherit; background-color: #fffbeb; text-decoration:none;
-    border: 1px solid #000;
-    border-radius: 1.6em;
-    box-shadow: 2px 2px Tan;
-    padding-left: 0.45em;
-    font-size: 1.0em;
-    height: 1.6em;
-    width: 1.6em;
-    opacity: 1;
-    transition-property: color, background-color, box-shadow;
-	transition-duration: 0.3s, 0.3s;
-	transition-timing-function: ease, ease;
+span.swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    box-shadow: 0 0 0 0;
 }
 
 /* MEDIA QUERY */
