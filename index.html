@@ -11,7 +11,8 @@
     <meta name="author" content="Stanley Sun" />
     <meta name="viewport" content="width=device-width, initial-scale=1">        
     <link rel="favourites icon" href="/assets/favicon.ico" />
-    <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+    <!--<link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">-->
+    <link rel="preload" href="https://fonts.cdnfonts.com/s/13494/Menlo-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/assets/style.css" media="screen" type="text/css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -32,7 +33,9 @@
         </ul>
     </div>
 
-    <div class="tile"><img src="/assets/img/sankaku-vol01-300px-opt3.gif" alt="sankaku book" title="sankaku book">
+    <div class="tile"><video autoplay loop muted playsinline>
+        <source src="assets/img/sankaku-vol01-300px.webm" type="video/webm">
+        <source src="assets/img/sankaku-vol01-300px.mp4" type="video/mp4"></video>
         <hr><h5>Blender Render</h5><p>Mockup for <a href="https://www.sankaku.is/" target="_blank">sankaku</a> Volume 01, a book of stories about people rethinking craft traditions, creative collaborations, and community-building in and around Tokyo.</p>
     </div>
 
@@ -136,9 +139,9 @@
         
     <div class="tile"><div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
         <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1/3"><img src="/assets/img/obj/bottle-opener-01.jpg" alt="bottle opener" title="bottle opener" loading="lazy"></div>
-            <div class="swiper-slide swiper-slide-next" role="group"><img src="/assets/img/obj/bottle-opener-02.jpg" alt="bottle opener" title="bottle opener" loading="lazy"></div>
-            <div class="swiper-slide" role="group"><img src="/assets/img/obj/bottle-opener-03.jpg" alt="bottle opener" title="bottle opener" loading="lazy"></div>
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1/3"><img src="/assets/img/obj/bottle-opener-01.jpg" alt="bottle opener" title="bottle opener" loading="lazy"><div class="swiper-lazy-preloader"></div></div>
+            <div class="swiper-slide swiper-slide-next" role="group"><img src="/assets/img/obj/bottle-opener-02.jpg" alt="bottle opener" title="bottle opener" loading="lazy"><div class="swiper-lazy-preloader"></div></div>
+            <div class="swiper-slide" role="group"><img src="/assets/img/obj/bottle-opener-03.jpg" alt="bottle opener" title="bottle opener" loading="lazy"><div class="swiper-lazy-preloader"></div></div>
         </div>
         <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
             <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" aria-current="true">1
@@ -151,8 +154,8 @@
     
     <div class="tile"><div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
         <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide-next" role="group"><img src="/assets/img/obj/workbench-01.jpg" alt="wood workbench" title="wood workbench" loading="lazy"></div>
-            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1/3"><img src="/assets/img/obj/chopping-block-01.jpg" alt="chopping block" title="chopping block" loading="lazy"></div>
+            <div class="swiper-slide swiper-slide-next" role="group"><img src="/assets/img/obj/workbench-01.jpg" alt="wood workbench" title="wood workbench" loading="lazy"><div class="swiper-lazy-preloader"></div></div>
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1/3"><img src="/assets/img/obj/chopping-block-01.jpg" alt="chopping block" title="chopping block" loading="lazy"><div class="swiper-lazy-preloader"></div></div>
         </div>
         <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
             <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" aria-current="true">1
