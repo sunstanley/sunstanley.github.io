@@ -14,6 +14,9 @@ img.preload {display: none;}
 
 .off {display: none;}
 
+@font-face{font-family:menlo;font-style:normal;font-weight:400;font-display:swap;
+    src:local('Menlo'),url(https://fonts.cdnfonts.com/s/13494/Menlo-Regular.woff) format('woff')}
+
 body {
 	font-family: 'Menlo', monospace, sans-serif;
     font-style: normal;
