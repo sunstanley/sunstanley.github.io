@@ -104,12 +104,12 @@ hr {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%),1fr));
-    grid-template-rows: auto 40px;
-    grid-gap: 1.6em;
+    grid-template-rows: auto 60px;
+    grid-gap: 1.0em;
     grid-auto-flow: dense;
     margin: 1.0em;
 }
-.grid #header {
+#header {
     grid-column: 1/-1;
 }
 .grid .nav {
@@ -188,8 +188,7 @@ img {
     display: flex;
     width: 100%;
 }
-.swiper-wrapper {
-}
+
 .swiper-slide {
     display: flex;
     width: 100% !important;
@@ -252,6 +251,12 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::after {
 @media only screen and (min-width: 870px) {
     .tile.wide{
         grid-column: span 2;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .grid{
+        grid-gap: 1.0em;
+        margin: 1.0em;
     }
 }
 @media screen and (prefers-reduced-motion: no-preference) {
