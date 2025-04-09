@@ -79,7 +79,12 @@ a:active {
 }
 
 ::-webkit-scrollbar {width: 12px;}
-::-webkit-scrollbar-thumb {-webkit-border-radius:10px; border-radius:10px; background: lightgrey;}
+::-webkit-scrollbar-thumb {border-radius:10px; background: lightgrey;}
+
+::selection {
+    color: black;
+    background: gold;
+}
 
 ul {
     list-style-type: none;
@@ -205,7 +210,7 @@ span.swiper-pagination-bullet {
     color: inherit; background-color: #fffbeb; text-decoration:none;
     border: 1px solid #000;
     border-radius: 1.6em;
-    box-shadow: 2px 2px 0.0px 0.1px Tan;
+    box-shadow: 2px 2px 0 0.1px Tan;
     padding-left: 0.45em;
     font-size: 1.0em;
     height: 1.6em;
@@ -218,7 +223,7 @@ span.swiper-pagination-bullet::after {
     top: 0;
     left: 0;
     color: inherit; background-color: #FFF; text-decoration:none;
-    border: 0px solid #000;
+    border: 0 solid #000;
     border-radius: 1.6em;
     box-sizing: border-box;
     margin: 0;
