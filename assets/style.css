@@ -116,6 +116,7 @@ hr {
 }
 #header {
     grid-column: 1/-1;
+	max-width: 800px;
 }
 .grid .nav {
     grid-column: 1/-1;
