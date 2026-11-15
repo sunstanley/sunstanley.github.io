@@ -174,14 +174,7 @@ div.nav ul li {
     grid-column: 1;
     padding-bottom: 3em;
 }
-.tile.wide.sq{
-    display: flex;
-    flex-flow: column nowrap;
-    align-self: flex-start;
-    grid-column: 1;
-    padding-bottom: 3em;
-	aspect-ratio: 1/1;
-}
+
 .tile.ar3_2 img{
     aspect-ratio: 3/2;
     object-position: center;
@@ -192,7 +185,7 @@ div.nav ul li {
 }
 img {
     width: 100%;
-    height: 100%;
+    height: auto;
     margin-bottom: 0.8em;
     object-fit: cover;
     object-position: top;
